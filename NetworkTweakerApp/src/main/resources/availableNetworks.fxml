@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<DialogPane fx:controller="com.example.network.tweaker.controller.AvailableNetworksController" fx:id="availableNetworksPane" prefHeight="263.0"
+  prefWidth="681.0" xmlns="http://javafx.com/javafx/8.0.271" xmlns:fx="http://javafx.com/fxml/1">
+  <content>
+    <VBox prefHeight="18.0" prefWidth="491.0">
+      <children>
+        <ScrollPane prefHeight="200.0" prefWidth="200.0">
+          <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="196.0" prefWidth="405.0">
+              <children>
+                <TableView fx:id="tblAvailableNetworks" layoutY="-3.0" prefHeight="198.0" prefWidth="646.0">
+                  <columns>
+                    <TableColumn fx:id="networkCol" prefWidth="218.0"/>
+                    <TableColumn fx:id="signalCol" prefWidth="75.0" text="Signal"/>
+                    <TableColumn fx:id="statusCol" prefWidth="351.0" text="Status"/>
+                  </columns>
+                </TableView>
+              </children>
+            </AnchorPane>
+          </content>
+        </ScrollPane>
+        <GridPane>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+          </rowConstraints>
+          <children>
+            <Button fx:id="btnCancel" mnemonicParsing="false" text="Cancel"/>
+            <Button fx:id="btnConnect" mnemonicParsing="false" text="Connect" GridPane.columnIndex="1" GridPane.halignment="RIGHT"
+              GridPane.valignment="CENTER"/>
+          </children>
+        </GridPane>
+      </children>
+    </VBox>
+  </content>
+</DialogPane>
